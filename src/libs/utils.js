@@ -5,7 +5,7 @@ function _addZero (value) {
 function formatDateTime (timestamp) {
   const date = new Date(timestamp);
   const y = date.getFullYear(),
-        m = date.getMonth(),
+        m = date.getMonth()+1,
         d = date.getDate(),
         h = _addZero(date.getHours()),
         mi = _addZero(date.getMinutes()),

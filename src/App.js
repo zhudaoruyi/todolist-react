@@ -72,8 +72,6 @@ function App() {
 
   return (
     <div className="App">
-      <CheckModal isShowCheckModal={isShowCheckModal} data={currentData} closeModal={ () => setShowCheckModal(false)}></CheckModal>
-      <EditModal isShowEditModal={isShowEditModal} data={currentData} submitEdit={submitEdit}></EditModal>
       <MyHeader openInput={ () => setInputShow(!isInputShow) } />
       <AddInput isInputShow={ isInputShow } addItem={addItem} />
 
@@ -83,13 +81,28 @@ function App() {
             {
               todoList.map((item, index) => {
                 return (
-                  <TodoItem data={item} key={index} openCheckModal={openCheckModal} openEditModal={openEditModal} removeItem={removeItem} completeItem={completeItem}/>
+                  <TodoItem
+                   data={item}
+                   key={index}
+                   openCheckModal={openCheckModal}
+                   openEditModal={openEditModal}
+                   removeItem={removeItem}
+                   completeItem={completeItem}/>
                 );
               })
             }
           </ul>
         )
       }
+
+      <CheckModal
+       isShowCheckModal={isShowCheckModal}
+       data={currentData}
+       closeModal={ () => setShowCheckModal(false)} />
+      <EditModal
+       isShowEditModal={isShowEditModal}
+       data={currentData}
+       submitEdit={submitEdit} />
     </div>
   );
 }
