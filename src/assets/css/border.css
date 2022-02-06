@@ -1,0 +1,35 @@
+@charset "utf-8";
+.border,
+.border-top,
+.border-right,
+.border-bottom,
+.border-left,
+.border-topbottom,
+.border-rightleft,
+.border-topleft,
+.border-rightbottom,
+.border-topright,
+.border-bottomleft {
+  position: relative;
+}
+
+.border::before,
+.border-top::before,
+.border-right::before,
+.border-bottom::before,
+.border-left::before,
+.border-topbottom::before,
+.border-topbottom::after,
+.border-rightleft::before,
+.border-rightleft::after,
+.border-topleft::before,
+.border-topleft::after,
+.border-rightbottom::before,
+.border-rightbottom::after,
+.border-topright::before,
+.border-topright::after,
+.border-bottomleft::before,
+.border-bottomleft::after {
+  content: "\0020";
+  overflow: hidden;
+}
