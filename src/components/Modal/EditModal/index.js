@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import {useRef, useCallback} from 'react';
 import './index.scss';
 import Modal from "../";
 import { formatDateTime } from "../../../libs/utils";
@@ -9,7 +9,7 @@ function EditModal (props) {
         inputRef = useRef(),
         checkRef = useRef();
 
-  const formatNewData = () => {
+  const formatNewData = useCallback(() => {
     const val = inputRef.current.value.trim(),
           valLen = val.length;
     if (valLen === 0) {
@@ -22,7 +22,7 @@ function EditModal (props) {
       completed: checkRef.current.checked
     }
     submitEdit(newData, data.id)
-  }
+  }, [submitEdit, data])
 
   return (
     <Modal

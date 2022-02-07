@@ -82,7 +82,7 @@ function App() {
               todoList.map((item, index) => {
                 return (
                   <TodoItem
-                   data={item}
+                    dataItem={item}
                    key={index}
                    openCheckModal={openCheckModal}
                    openEditModal={openEditModal}

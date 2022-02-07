@@ -67,3 +67,10 @@ a{
   color: #25a4bb;
   text-decoration: none;
 }
+
+img {width: 100%;}
+
+.container {
+  padding: .82rem 0 .44rem 0;
+  box-sizing: border-box;
+}
