@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](./thumbnail.png)
+![](https://gitee.com/penmily/todolist-react/raw/master/thumbnail.png)
 
 ## Available Scripts
 
