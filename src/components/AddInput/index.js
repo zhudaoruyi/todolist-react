@@ -1,11 +1,19 @@
-import React, { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 import './index.scss';
 
 function AddInput (props) {
 
+  
   const { isInputShow, addItem } = props,
         inputRef = useRef();
+  
+  // 输入框获取焦点
+  useEffect(() => {
+    if (isInputShow) {
+      inputRef.current.focus()
+    }
+  }, [isInputShow])
 
   const submitValue = () => {
     const inputValue = inputRef.current.value.trim();
